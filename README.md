@@ -1,4 +1,4 @@
-# awoo-news-task
+# News API Task
 
 ## Project setup
 ```
