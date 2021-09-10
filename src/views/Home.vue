@@ -2,7 +2,7 @@
   <div class="row">
     <h2 class="col-md-12 fw-bold fs-3">Find New Stuff</h2>
     <div class="col-md-12 mb-5">
-      <div class="w-100">
+      <div class="w-100 mb-2">
         <!-- <label for="" class="form-label"></label> -->
         <input type="text" class="form-control" id="" placeholder="COVID-19" />
       </div>

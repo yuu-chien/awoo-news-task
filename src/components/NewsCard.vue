@@ -8,8 +8,11 @@
         </div>
       </div>
       <p class="c-newsCard__dec">{{ news.description }}</p>
-      <a href="#" class="c-newsCard__link text-primary text-opacity-50"
-        >Continue reading</a
+      <a
+        href="#"
+        class="c-newsCard__link text-primary text-opacity-50"
+        @click.prevent="readMore(news)"
+        >Read more</a
       >
     </div>
     <div class="c-newsCard__img col-5">
@@ -21,5 +24,20 @@
 <script>
 export default {
   props: ["news"],
+  data() {
+    return {
+      tempDetail: {},
+    };
+  },
+  methods: {
+    readMore(e) {
+      this.tempDetail = e;
+      // console.log(this.tempDetail);
+      this.$router.push({
+        path: "/detail",
+        params: { data: this.tempDetail },
+      });
+    },
+  },
 };
 </script>
