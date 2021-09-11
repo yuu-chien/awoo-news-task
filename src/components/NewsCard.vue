@@ -34,7 +34,7 @@ export default {
       this.tempDetail = e;
       // console.log(this.tempDetail);
       this.$router.push({
-        path: "/detail",
+        name: "Detail",
         params: { data: this.tempDetail },
       });
     },
