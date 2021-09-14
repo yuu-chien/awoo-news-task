@@ -1,10 +1,11 @@
 <template>
   <div id="app" class="container py-4">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view />
+    <div class="row">
+      <h2 class="col-md-12 fw-bold fs-3 text-white bg-info py-2 mb-3">
+        Find New Stuff
+      </h2>
+      <router-view />
+    </div>
   </div>
 </template>
 
