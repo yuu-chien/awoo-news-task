@@ -1,11 +1,9 @@
 <template>
   <div class="c-newsCard border rounded shadow-sm mb-4">
     <div class="c-newsCard__cnt col-7 p-3">
-      <div class="">
-        <div class="c-newsCard__tit text-info mb-2">{{ news.title }}</div>
-        <div class="c-newsCard__subtit text-muted">
-          {{ news.publishedAt }} by {{ news.author }}
-        </div>
+      <div>
+        <div class="c-newsCard__tit text-info mb-1">{{ news.title }}</div>
+        <div class="c-newsCard__subtit text-muted">{{ news.publishedAt }}</div>
       </div>
       <p class="c-newsCard__dec">{{ news.description }}</p>
       <a
@@ -32,9 +30,9 @@ export default {
   methods: {
     readMore(e) {
       this.tempDetail = e;
-      // console.log(this.tempDetail);
       this.$router.push({
         name: "Detail",
+        path: `detail/${this.tempDetail.source.id}`,
         params: { data: this.tempDetail },
       });
     },
