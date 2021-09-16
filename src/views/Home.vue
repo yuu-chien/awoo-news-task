@@ -1,13 +1,10 @@
 <template>
   <div class="col-12">
-    <div class="l-pic" style="height: 360px">
-      <img
-        src="https://images.unsplash.com/photo-1585007600263-71228e40c8d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
-        alt=""
-      />
+    <div class="l-pic" style="height: 320px">
+      <img src="../../public/kv.jpg" alt="" />
     </div>
     <div class="row">
-      <div class="col-md-12 my-4">
+      <div class="col-md-12 mt-4 mb-5">
         <div class="row">
           <div class="col-md-5">
             <input
@@ -28,7 +25,7 @@
           <div class="col-md-2">
             <button
               type="button"
-              class="btn btn-outline-info"
+              class="btn btn-outline-info w-100"
               @click.prevent="getNews()"
             >
               Search
