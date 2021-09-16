@@ -7,13 +7,21 @@
         </h3>
       </div>
       <article>
-        <p class="">
-          January 1, 2021 by <span>{{ detail.author }}</span>
+        <p>
+          {{ detail.publishedAt }} by <span>{{ detail.author }}</span>
         </p>
-        <p>{{ detail.description }}</p>
-        <p>{{ detail.content }}</p>
-        <div class="l-pic">
-          <img :src="detail.urlToImage" :alt="detail.title" />
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <p>{{ detail.description }}</p>
+              <p>{{ detail.content }}</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="l-pic" style="height: 360px">
+              <img :src="detail.urlToImage" :alt="detail.title" />
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -26,6 +34,7 @@
 </template>
 
 <script>
+import moment from "moment";
 export default {
   data() {
     return {
@@ -44,6 +53,9 @@ export default {
   },
   created() {
     this.detail = this.$route.params.data;
+    this.detail.publishedAt = moment(this.detail.publishedAt).format(
+      "MMM DD YYYY"
+    );
   },
 };
 </script>

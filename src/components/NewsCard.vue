@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import moment from "moment";
 export default {
   props: ["news"],
   data() {
@@ -36,6 +37,9 @@ export default {
         params: { data: this.tempDetail },
       });
     },
+  },
+  async created() {
+    this.news.publishedAt = moment(this.news.publishedAt).format("MMM DD YYYY");
   },
 };
 </script>
